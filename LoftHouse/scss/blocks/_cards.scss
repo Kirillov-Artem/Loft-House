@@ -1,0 +1,96 @@
+.apartaments__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include mediatablet {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+}
+
+.apartaments__title {
+    margin-bottom: 88px;
+
+    @include mediatablet {
+        margin-bottom: 44px;
+    }
+}
+
+.apartaments {
+    position: relative;
+    &::before {
+        content: "III";
+        right: calc(50% + 555px);
+        transform: translate(50%, 0);
+        line-height: 1.13;
+        @include decornumber;
+    }
+}
+
+.card {
+    max-width: 540px;
+    color: $white;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(86, 86, 86, 0.8);
+    display: inline-block;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(36, 43, 51, 0) 0%, $dark 100%);
+        z-index: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    &::after {
+        opacity: 0;
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border: 3px double rgba(255, 255, 255, 0.4);
+        z-index: 3;
+
+        transition: opacity 0.2s ease-in;
+    }
+
+    &:hover {
+        color: $white;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+}
+
+.card:hover .card-img {
+    transform: scale(1.1);
+}
+
+.card:hover::before {
+    opacity: 0;
+}
+
+.card-img {
+    transition: transform 0.2s ease-in;
+}
+
+.card-title {
+    position: absolute;
+    bottom: 44px;
+    left: 50px;
+    font-size: 24px;
+    z-index: 10;
+
+    @include mediatablet {
+        font-size: 20px;
+        bottom: 30px;
+        left: 30px;
+    }
+}

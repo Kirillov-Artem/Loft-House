@@ -1,0 +1,43 @@
+.cta {
+    padding: 180px 0;
+    background: linear-gradient(180deg, $dark 10.42%, rgba(36, 43, 51, 0) 50.52%, $dark 90.01%),
+        linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)), url("./../img/cta/cta-bg.png");
+    max-height: 560px;
+
+    @include mediatablet {
+        padding: 60px 0;
+    }
+}
+
+.cta__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    @include mediatablet {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cta__text {
+    color: $muted;
+
+    line-height: 24px;
+    font-size: 16px;
+    padding-top: 17px;
+
+    @include mediatablet {
+        font-size: 14px;
+        max-width: 744px;
+    }
+}
+.cta__form {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 30px;
+
+    @include mediatablet {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}

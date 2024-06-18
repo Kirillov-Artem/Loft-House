@@ -1,0 +1,28 @@
+.feedback {
+    padding-bottom: 180px;
+
+    @include mediatablet {
+        padding-bottom: 90px;
+    }
+}
+
+.feedback__title {
+    margin-bottom: 38px;
+    @include mediatablet {
+        margin-bottom: 20px;
+    }
+}
+
+.feedback__form {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    @include mediatablet {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        align-items: center;
+        justify-items: center;
+    }
+}

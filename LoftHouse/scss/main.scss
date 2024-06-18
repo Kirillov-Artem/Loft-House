@@ -1,0 +1,16 @@
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/mixins";
+
+//Blocks
+
+@import "./blocks/header";
+@import "./blocks/nav";
+@import "./blocks/benefits";
+@import "./blocks/cards";
+@import "./blocks/cta";
+@import "./blocks/video.scss";
+@import "./blocks/map.scss";
+@import "./blocks/feedback.scss";
+@import "./blocks/footer.scss";
